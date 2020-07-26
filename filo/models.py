@@ -10,7 +10,7 @@ class Filo(models.Model):
     idreino = models.ForeignKey(Reino, models.DO_NOTHING, db_column='idReino', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'filo'
 
     def __str__(self):

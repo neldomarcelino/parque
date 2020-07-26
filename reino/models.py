@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Reino(models.Model):
-    idreino = models.AutoField(db_column='idReino', primary_key=True)  # Field name made lowercase.
-    descricao = models.CharField(max_length=45)
+    idreino = models.AutoField(db_column='idreino', primary_key=True)  # Field name made lowercase.
+    descricao = models.CharField(max_length=200, db_column="reino")
 
     class Meta:
         managed = False

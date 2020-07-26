@@ -11,7 +11,7 @@ class Location(models.Model):
     specie = models.ForeignKey(Specie, models.DO_NOTHING, db_column='idEspecie')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'localizacaoespecie'
         unique_together = (('id_localization', 'district', 'specie'),)
 

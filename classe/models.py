@@ -10,5 +10,5 @@ class Classe(models.Model):
     idfilo = models.ForeignKey(Filo, models.DO_NOTHING, db_column='idFilo', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'classe'

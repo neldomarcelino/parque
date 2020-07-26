@@ -10,5 +10,5 @@ class Province(models.Model):
     region = models.ForeignKey(Region, models.DO_NOTHING, db_column='idRegiao')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'provincia'

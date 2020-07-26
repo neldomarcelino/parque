@@ -9,8 +9,8 @@ from genero.models import Genero
 
 
 class Specie(models.Model):
-    id_specie = models.AutoField(db_column='idEspecie', primary_key=True)  # Field name made lowercase.
-    specie = models.CharField(db_column='Especie', max_length=45, blank=True, null=True)  # Field name made lowercase.
+    id_specie = models.AutoField(db_column='idspecie', primary_key=True)  # Field name made lowercase.
+    specie = models.CharField(db_column='specie', max_length=45, blank=True, null=True)  # Field name made lowercase.
     gender = models.ForeignKey(Genero, models.DO_NOTHING, db_column='idGenero', blank=True, null=False)  # Field name made lowercase.
     habitat = models.CharField(db_column='Habitat', max_length=1000, blank=True, null=True)  # Field name made lowercase.
     detail = models.CharField(db_column='detalhes', max_length=1000, blank=True, null=True)
@@ -18,8 +18,8 @@ class Specie(models.Model):
     date_created = models.DateTimeField(db_column='DataCriacao')  # Field name made lowercase.
 
     class Meta:
-        managed = False
-        db_table = 'especie'
+        managed = True
+        db_table = 'specie'
 
     def was_published_recently(self):
         now = timezone.now()

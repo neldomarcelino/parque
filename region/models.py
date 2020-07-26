@@ -8,5 +8,5 @@ class Region(models.Model):
     region = models.CharField(db_column='Regiao', max_length=45)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'regiao'

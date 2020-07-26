@@ -8,7 +8,7 @@ class Person(models.Model):
     name = models.CharField(db_column='Nome', max_length=45)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'pessoa'
 
     def __str__(self):

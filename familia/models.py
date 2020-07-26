@@ -10,5 +10,5 @@ class Familia(models.Model):
     idordem = models.ForeignKey(Ordem, models.DO_NOTHING, db_column='idOrdem', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'familia'

@@ -14,7 +14,7 @@ class Geography(models.Model):
     longitude = models.DecimalField(db_column='longitude', max_digits=100, decimal_places=2)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'geography'
 
     def __str__(self):

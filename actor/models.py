@@ -10,7 +10,7 @@ class Actor(models.Model):
     specie = models.ForeignKey(Specie, models.DO_NOTHING, db_column='idEspecie')  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'quemencontrou'
         unique_together = (('person', 'specie'),)
 

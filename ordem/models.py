@@ -10,5 +10,5 @@ class Ordem(models.Model):
     idclasse = models.ForeignKey(Classe, models.DO_NOTHING, db_column='idClasse', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'ordem'
