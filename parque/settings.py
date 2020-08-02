@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+
+    'leaflet',
+    'djgeojson',
 ]
 
 MIDDLEWARE = [
@@ -94,9 +97,15 @@ WSGI_APPLICATION = 'parque.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',
-        'NAME': 'parkArea',
-        'USER': 'digio',
-        'PASSWORD': '#D!g(o+*12.=?',
+
+        #'NAME': 'parkArea',
+        #'USER': 'digio',
+        #'PASSWORD': '#D!g(o+*12.=?',
+
+         'NAME': 'heroku_be633cdbed8542f',
+         'USER': 'b3bd31aba4a872',
+         'PASSWORD': '767bcf0f',
+
     }
 }
 
@@ -141,3 +150,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+LEAFLET_CONFIG = {
+    # conf here
+    'DEFAULT_CENTER': (6.0, 45.0),
+    'DEFAULT_ZOOM': 4,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 26,
+    'DEFAULT_PRECISION': 6,
+    'SCALE': 'both',
+    'FORCE_IMAGE_PATH': True,
+}
