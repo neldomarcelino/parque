@@ -2,57 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkArea.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkArea.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/dist/Leaflet.fullscreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/dist/Leaflet.fullscreen.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/dist/fullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/dist/fullscreen@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/dist/leaflet.fullscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/map/leaflet_widget_overlays.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/Control.MiniMap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/Control.MiniMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/marker-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/spritesheet-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/spritesheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/images/spritesheet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/leaflet.draw-src.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/leaflet.draw-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/leaflet.draw-src.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/leaflet.draw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/draw/leaflet.draw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/marker-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/marker-icon@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/reset-view.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/toggle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/zoom-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/images/zoom-out.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet-src.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet-src.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet.extras.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet.forms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/leaflet.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/proj4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/proj4leaflet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/parque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parque.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/change_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +133,7 @@
       <workItem from="1595800774911" duration="2309000" />
       <workItem from="1596311523621" duration="7647000" />
       <workItem from="1596340769344" duration="6337000" />
-      <workItem from="1596390844224" duration="5683000" />
+      <workItem from="1596390844224" duration="7726000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>
@@ -203,14 +157,14 @@
       <screen x="1366" y="0" width="1600" height="900" />
     </state>
     <state x="1822" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741/1366.0.1600.900@1366.0.1600.900" timestamp="1595775697665" />
-    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594958755655">
+    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596399961759">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1594958755655" />
-    <state x="1772" y="27" key="SettingsEditor" timestamp="1596304652579">
-      <screen x="1600" y="0" width="1366" height="768" />
+    <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1596399961759" />
+    <state x="172" y="31" key="SettingsEditor" timestamp="1596399966518">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1595793871594" />
+    <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1596399966518" />
     <state x="1772" y="27" key="SettingsEditor/1600.0.1366.768/0.27.1600.873@1600.0.1366.768" timestamp="1596304652579" />
   </component>
 </project>
