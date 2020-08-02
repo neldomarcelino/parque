@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +131,7 @@
       <workItem from="1595800774911" duration="2309000" />
       <workItem from="1596311523621" duration="7647000" />
       <workItem from="1596340769344" duration="6337000" />
-      <workItem from="1596390844224" duration="8691000" />
+      <workItem from="1596390844224" duration="8812000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>

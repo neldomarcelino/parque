@@ -98,13 +98,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',
 
-        'NAME': 'parkArea',
-        'USER': 'digio',
-        'PASSWORD': '#D!g(o+*12.=?',
+        #'NAME': 'parkArea',
+        #'USER': 'digio',
+        #'PASSWORD': '#D!g(o+*12.=?',
 
-        # 'NAME': 'heroku_be633cdbed8542f',
-        # 'USER': 'b3bd31aba4a872',
-        # 'PASSWORD': '767bcf0f',
+        'NAME': 'heroku_be633cdbed8542f',
+        'USER': 'b3bd31aba4a872',
+        'PASSWORD': '767bcf0f',
 
     }
 }
