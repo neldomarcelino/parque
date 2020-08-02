@@ -4,7 +4,6 @@ certifi==2018.1.18
 chardet==3.0.4
 click==7.1.2
 cryptography==2.1.4
-cupshelpers==1.0
 defer==1.0.6
 distlib==0.3.1
 distro-info===0.18ubuntu0.18.04.1
@@ -24,7 +23,6 @@ Jinja2==2.11.2
 jsonfield==2.0.2
 keyring==10.6.0
 keyrings.alt==3.0
-language-selector==0.1
 launchpadlib==1.10.6
 lazr.restfulclient==0.13.5
 lazr.uri==1.0.3
