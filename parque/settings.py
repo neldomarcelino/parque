@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
     'leaflet',
     'djgeojson',
+    #'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -105,6 +106,7 @@ DATABASES = {
         'NAME': 'heroku_be633cdbed8542f',
         'USER': 'b3bd31aba4a872',
         'PASSWORD': '767bcf0f',
+        'HOST': 'us-mm-auto-dca-02-a.cleardb.net',
 
     }
 }

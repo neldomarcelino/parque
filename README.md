@@ -3,6 +3,7 @@ Sistema de registo e mapeamento de localizacoes de especies,
 
 
 ## Database 
+Na raiz do projecto encontra-se o script da Base de dados de nome "parkArea" 
 
 
 
