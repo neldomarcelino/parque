@@ -1,6 +1,5 @@
 
 {% load i18n static %}
-{% load leaflet_tags %}
 
 <!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
@@ -8,8 +7,6 @@
 <head>
 <title>PNQ</title>
 
-{% leaflet_css plugins="ALL" %}
-{% leaflet_js plugins="ALL" %}
 <link href='{% static "admin/dist/leaflet.fullscreen.css" %}' rel='stylesheet' />
 <script src='{% static "admin/dist/Leaflet.fullscreen.min.js" %}'></script>
 

@@ -7,12 +7,13 @@ from .models import Specie
 
 
 class IndexView(generic.ListView):
+    model = Specie
     template_name = 'species/index.html'
-    context_object_name = 'species'
+    context_object_name = 'species_list'
 
     def get_queryset(self):
         """ Return the list of species """
-        return Specie.objects.order_by('especie')
+        return Specie.objects.order_by('date_created')
 
 
 class DetailView(generic.DetailView):

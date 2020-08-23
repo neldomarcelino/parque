@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+
+  {% block main-content %}
+    <!-- MAIN -->
+
+    <main role="main">
+      <!-- Content -->
+      <article>
+        <div class="section background-white">
+          <div class="line">
+            <div class="margin text-center">
+              {% for specie in species_list %}
+                  <div class="s-12 m-12 l-4 margin-bottom">
+                    <div class="padding-2x block-bordered border-radius">
+                      <i class="icon-paperplane_ico icon2x text-primary margin-bottom-30"></i>
+                      <h2 class="text-thin">{{ specie.common_name }}</h2>
+                      <p class="margin-bottom-30">{{specie.description}}</p>
+                      <a class="button border-radius background-primary text-size-12 text-white text-strong" href="/">GET MORE INFO</a>
+                    </div>
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </article>
+    </main>
+  {% endblock %}

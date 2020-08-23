@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from geography.models import Geography
+# from geography.models import Geography
 from location.models import Location
 from species.models import Specie
 from actor.models import Actor
@@ -21,10 +21,10 @@ class LocationInline(admin.TabularInline):
     model = Location
     extra = 1
 
-class GeographyInline(admin.TabularInline):
-    model = Geography
-    extra = 1
-    max_num = 1
+# class GeographyInline(admin.TabularInline):
+#     model = Geography
+#     extra = 1
+#     max_num = 1
 
 class SpecieAdmin(admin.ModelAdmin):
     list_display = ('specie', 'habitat', 'detail', 'common_name', 'gender', 'date_created')
@@ -39,7 +39,8 @@ class SpecieAdmin(admin.ModelAdmin):
         (None, {'fields': ['gender']}),
         ('Date Information', {'fields': ['date_created']})
     ]
-    inlines = [GeographyInline, LocationInline, PersonInline, IdentifierInline]
+    # inlines = [GeographyInline, LocationInline, PersonInline, IdentifierInline]
+    inlines = [LocationInline, PersonInline, IdentifierInline]
 
 
 admin.site.register(Specie, SpecieAdmin)
