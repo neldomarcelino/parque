@@ -20,81 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/components.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/responsee.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/css/template-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/Simple-Line-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/Simple-Line-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/Simple-Line-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/Simple-Line-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/mfglabsiconset-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/mfglabsiconset-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/mfglabsiconset-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/font/mfglabsiconset-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/01-boxed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/02-boxed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/bio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/blog-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/img-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/img-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/img-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/logo-free.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/portfolio/thumb-14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/img/premium-features.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/responsee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/js/template-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/owl-carousel/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/owl-carousel/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/owl-carousel/owl.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/home/owl-carousel/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/species/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/species/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/parque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parque.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/species/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/species/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/templates/species/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/templates/species/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/species/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/change_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -134,22 +74,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/home/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/registration" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home\img" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\home" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\user" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\species" />
       <recent name="$PROJECT_DIR$/static/admin/js/map" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\registration" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home\img" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\home" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for species.tests.EspecieModelTests">
@@ -236,7 +176,9 @@
       <workItem from="1597561308665" duration="3331000" />
       <workItem from="1598176029771" duration="410000" />
       <workItem from="1598176455365" duration="4804000" />
-      <workItem from="1598193484248" duration="16099000" />
+      <workItem from="1598193484248" duration="18628000" />
+      <workItem from="1598269852537" duration="27804000" />
+      <workItem from="1598546516547" duration="15561000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>
@@ -261,6 +203,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Design." />
@@ -275,6 +218,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="508" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1597564308687" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598378395069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598378395069" />
     <state x="1822" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1595775697665">
       <screen x="1366" y="0" width="1600" height="900" />
     </state>

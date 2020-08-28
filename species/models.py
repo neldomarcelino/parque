@@ -23,7 +23,6 @@ class Specie(models.Model):
 
     def was_published_recently(self):
         now = timezone.now()
-
         return now - datetime.timedelta(days=2) <= self.date_created <= now
 
     def __str__(self):

@@ -54,12 +54,23 @@
           </div>
           <div class="top-nav s-12 l-10">
             <p class="nav-text"></p>
+        {% block usertools %}
+        {% if user.is_authenticated %}
             <ul class="right chevron">
               <li><a href="{% url 'home:index'%}">Pagina Inicial</a></li>
               <li><a href="{% url 'species:index'%}">Especies</a></li>
               <li><a href="gallery.html">Galeria</a></li>
-              <li><a href="../user/login.html">Login</a></li>
+              <li><a>{{ user.username }}</a>
+                <ul>
+                  <li><a href="{% url 'logout'%}">Logout</a></li>
+                </li>
+                  <li><a>Editar</a></li>
+                </ul>
+              </li>
+
             </ul>
+        {% endif %}
+            {% endblock %}
           </div>
         </div>
       </nav>

@@ -26,6 +26,7 @@ class LocationInline(admin.TabularInline):
 #     extra = 1
 #     max_num = 1
 
+
 class SpecieAdmin(admin.ModelAdmin):
     list_display = ('specie', 'habitat', 'detail', 'common_name', 'gender', 'date_created')
     list_filter = ['habitat', 'date_created', 'gender']
