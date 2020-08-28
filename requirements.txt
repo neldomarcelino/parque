@@ -1,10 +1,7 @@
-asgiref==3.2.10
-Django==2.2.15
-django-geojson==3.0.0
-django-leaflet==0.27.1
-djangorestframework==3.11.1
-mysql-connector-python==8.0.21
+asgiref @ file:///tmp/build/80754af9/asgiref_1594338739818/work
+certifi==2020.6.20
+Django==2.2.7
 mysqlclient==2.0.0
 pytz==2020.1
-six==1.15.0
 sqlparse==0.3.1
+wincertstore==0.2
