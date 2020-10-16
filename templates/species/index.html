@@ -1,66 +1,147 @@
 {% extends "home/base.html" %}
 {% load i18n static %}
-  {% block main-content %}
-    <!-- MAIN -->
+{% block main-content %}
 
-    <main role="main">
-      <!-- Content -->
-      <article>
-        <div class="section background-white">
-          <div class="line">
-            <div class="margin text-center">
-              {% for specie in species_list %}
-                  <div class="s-12 m-12 l-4 margin-bottom">
-                    <div class="padding-2x block-bordered border-radius">
-                      <i class="icon-paperplane_ico icon2x text-primary margin-bottom-30"></i>
-                      <h2 class="text-thin">{{ specie.common_name }}</h2>
-                      <p class="margin-bottom-30">{{specie.description}}</p>
-                      <a class="button border-radius background-primary text-size-12 text-white text-strong" href="/">GET MORE INFO</a>
+<!-- MAIN -->
+<!-- Container -->
+
+<div id="container">
+    <!-- Content -->
+
+    <div id="content" class="flex content-modify">
+
+        <div id="content-main">
+
+            <a href="" class="addlink">
+                Adicionar Especie
+            </a>
+            <br><br>
+            <div class="module filtered" id="changelist">
+
+
+                <div id="toolbar">
+                    <form id="changelist-search" method="get">
+                        <div><!-- DIV needed for valid HTML -->
+                            <!--label for="searchbar"><img src="{% static 'specie/search.svg' %}" alt="Search"></label-->
+                            <input type="text" size="50" name="q" id="searchbar" autofocus="" style="height: 33px;">
+                            <input type="submit" value="Search" class="search-input" style="height: 33px;">
+                            <input type="hidden" name="o" value="">
+                        </div>
+                    </form>
+                </div>
+
+
+                <div id="changelist-filter">
+                    <h2>Filtro</h2>
+
+                    <h3> Por habitat </h3>
+                    <ul>
+                        <li class="selected"> <a href="http://127.0.0.1:8000/admin/species/specie/?o=" title="All">Todos</a></li>
+                        <li> <a href="" title="Esgoto">Terrestre</a></li>
+                        <li> <a href="" title="RE">Marinho</a></li>
+                    </ul>
+
+                    <h3> Por Data Registo </h3>
+                    <ul>
+                        {% for key, value in filter.items %}
+                            <li> <a href="{{key}}" title="Any date">{{value}}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <ul>
+                        <li> <a> Busca Avançada </a> </li>
+
+                    </ul>
+                </div>
+
+                <form id="changelist-form" method="post" novalidate="">
+
+                    {% csrf_token %}
+                    <!--div-- class="actions">
+                        <label>Action:
+                            <select name="action" required="">
+                                <option value="" selected="selected">---------</option>
+                                <option value="delete_selected">Delete selected species</option>
+                            </select>
+                        </label>
+
+                        <input type="hidden" name="select_across" value="0" class="select-across">
+                        <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+
+                        <span class="action-counter" data-actions-icnt="1" style="display: inline;">0 of 1 selected</span>
+                        <span class="all">All 2 selected</span>
+                        <span class="question">
+                            <a href="#" title="Click here to select the objects across all pages">Select all 2 species</a>
+                        </span>
+                        <span class="clear"> <a href="#">Clear selection</a></span>
+                    </div-->
+
+                    <div class="results">
+                        <table id="result_list">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="action-checkbox-column">
+                                        <div class="text"><span><input type="checkbox" id="action-toggle"></span></div>
+                                        <div class="clear"></div>
+                                    </th>
+
+                                    {% for key,header in header_list.items %}
+                                        <th scope="col" class="sortable column-specie">
+                                            <div class="text"><a href="{# url 'species:index' o=key #}">{{ header|capfirst }}</a></div>
+                                            <div class="clear"></div>
+                                        </th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for data in results_list%}
+                                    <tr class="row1">
+                                        <td class="action-checkbox">
+                                            <input type="checkbox" name="_selected_action" value="{{data.id_specie}}" class="action-select">
+                                        </td>
+                                        <th class="field-specie">
+                                            <a href="{% url 'species:detail' pk=data.id_specie %}">
+                                                {{data.specie}}
+                                            </a>
+                                        </th>
+                                        <td class="field-habitat">
+                                            {{data.habitat}}
+                                        </td>
+                                        <td class="field-detail">
+                                            {{data.detail}}
+                                        </td>
+                                        <td class="field-common_name">
+                                            {{data.common_name}}
+                                        </td>
+                                        <td class="field-gender nowrap">
+                                            {{data.gender}}
+                                        </td>
+                                        <td class="field-date_created nowrap">
+                                            {{data.date_created}}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
-                  </div>
-              {% endfor %}
 
+                    <p class="paginator">
+                        {{results_list.size}} species
+                    </p>
+
+                </form>
             </div>
-            {% if result_hidden_fields %}
-<div class="hiddenfields">{# DIV for HTML validation #}
-{% for item in result_hidden_fields %}{{ item }}{% endfor %}
-</div>
-{% endif %}
-{% if results %}
-<div class="results">
-<table id="result_list">
-<thead>
-<tr>
-{% for header in result_headers %}
-<th scope="col" {{ header.class_attrib }}>
-       <div class="sortoptions">
-         <a class="sortremove" href="{{ header.url_remove }}" title="{% trans "Remove from sorting" %}"></a>
-         <span class="sortpriority" title="{% blocktrans with priority_number=header.sort_priority %}Sorting priority: {{ priority_number }}{% endblocktrans %}">{{ header }}</span>
-         <a href="{{ header.url_toggle }}" class="toggle {% if header.ascending %}ascending{% else %}descending{% endif %}" title="{% trans "Toggle sorting" %}"></a>
-       </div>
-   <div class="text">{% if header.sortable %}<a href="{{ header.url_primary }}">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>
-   <div class="clear"></div>
-</th>{% endfor %}
-</tr>
-</thead>
-<tbody>
-{% for result in results %}
-    <tr>
-        <td colspan="{{ result|length }}">{{ result.specie }}</td>
-        <td colspan="{{ result|length }}">{{ result.date_created }}</td>
-        <td colspan="{{ result|length }}">{{ result.habitat }}</td>
-        <td colspan="{{ result|length }}">{{ result.common_name }}</td>
-    </tr>
-
-<tr class="{% cycle 'row1' 'row2' %}"></tr>
-{% endfor %}
-</tbody>
-</table>
-</div>
-{% endif %}
-          </div>
-
         </div>
-      </article>
-    </main>
-  {% endblock %}
+
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+</div>
+<!-- END Container -->
+{% endblock %}
+
+
+
+
+

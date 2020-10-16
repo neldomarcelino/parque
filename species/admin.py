@@ -45,3 +45,4 @@ class SpecieAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Specie, SpecieAdmin)
+

@@ -101,14 +101,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         # 'ENGINE': 'django.contrib.gis.db.backends.mysql',
 
-        # 'NAME': 'parkArea',
-        # 'USER': 'root',
-        # 'PASSWORD': '#D!g(o+*12.=?',
+        'NAME': 'parkArea',
+        'USER': 'root',
+        'PASSWORD': '#D!g(o+*12.=?',
 
-        'NAME': 'heroku_be633cdbed8542f',
-        'USER': 'b3bd31aba4a872',
-        'PASSWORD': '767bcf0f',
-        'HOST': 'us-mm-auto-dca-02-a.cleardb.net',
+        # 'NAME': 'heroku_be633cdbed8542f',
+        # 'USER': 'b3bd31aba4a872',
+        # 'PASSWORD': '767bcf0f',
+        # 'HOST': 'us-mm-auto-dca-02-a.cleardb.net',
 
     }
 }
@@ -154,7 +154,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-LOGIN_REDIRECT_URL = '/'
+#LOGIN_REDIRECT_URL = '/'
 
 # LEAFLET_CONFIG = {
 #     # conf here

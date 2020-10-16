@@ -1,3 +1,4 @@
+from django.conf.urls import url
 from django.urls import path
 
 from . import views
@@ -5,5 +6,7 @@ from . import views
 app_name = 'species'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('<int:pk>/', views.DetailView.as_view(), name="detail")
+    path('<str:q>', views.IndexView.as_view(), name='search'),
+    url(r'^(?P<str>)/$', views.IndexView.as_view(), name='search'),
+    path('detail/<int:pk>', views.DetailView.as_view(), name="detail")
 ]
