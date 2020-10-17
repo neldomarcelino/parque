@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'district.apps.DistrictConfig',
     'province.apps.ProvinceConfig',
     'region.apps.RegionConfig',
-    # 'geography.apps.GeometryConfig',
+    'geography.apps.GeometryConfig',
     'person.apps.PersonConfig',
     'identifier.apps.IdentifierConfig',
     'actor.apps.ActorConfig',
@@ -53,9 +53,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django.contrib.gis',
+    'django.contrib.gis',
 
-    #'leaflet',
+    'leaflet',
     #'djgeojson',
     #'rest_framework',
 ]
@@ -98,8 +98,8 @@ WSGI_APPLICATION = 'parque.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        # 'ENGINE': 'django.contrib.gis.db.backends.mysql',
+        # 'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.contrib.gis.db.backends.mysql',
 
         'NAME': 'parkArea',
         'USER': 'root',
@@ -154,17 +154,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-#LOGIN_REDIRECT_URL = '/'
 
-# LEAFLET_CONFIG = {
-#     # conf here
-#     'DEFAULT_CENTER': (6.0, 45.0),
-#     'DEFAULT_ZOOM': 4,
-#     'MIN_ZOOM': 3,
-#     'MAX_ZOOM': 26,
-#     'DEFAULT_PRECISION': 6,
-#     'SCALE': 'both',
-#     'FORCE_IMAGE_PATH': True,
-# }
 
-#GDAL_LIBRARY_PATH = 'C:\Miniconda\envs\pvenv\Library\lib\gdal_i.lib'
+LEAFLET_CONFIG = {
+    # conf here
+    'DEFAULT_CENTER': (6.0, 45.0),
+    'DEFAULT_ZOOM': 4,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 26,
+    'DEFAULT_PRECISION': 6,
+    'SCALE': 'both',
+    'FORCE_IMAGE_PATH': True,
+}

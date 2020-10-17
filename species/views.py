@@ -8,7 +8,7 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 # Create your views here.
 
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView
 from .models import Specie
 
 

@@ -7,11 +7,11 @@ Na raiz do projecto encontra-se o script da Base de dados de nome "parkArea"
 
 
 
-## Run Application
+## How To Run Application
 
 
 
-## Autors
+## Actors
 
 Guerzeneldo Marcelino Fernando
 
@@ -19,4 +19,14 @@ Github: neldomarcelino
 Email: guerzeneldo@gmail.com
 Contact: +258845440628
 
+## Working With Map-Geography
+Modify the file in the bellow path:
+C:\Users\user\.conda\envs\parque\Lib\site-packages\django\contrib\gis\gdal 
+("# Windows NT shared libraries
+    lib_names = ['gdal203', 'gdal202', 'gdal201', 'gdal20', 'gdal300']")
+If you are using conda or install the gdal and all dependeces 
+
+## Reference
+1. Leaflet Map Installation and Configuration:
+    - https://django-leaflet.readthedocs.io/en/latest/installation.html 
 
