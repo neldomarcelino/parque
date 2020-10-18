@@ -158,11 +158,13 @@ STATICFILES_DIRS = [
 
 LEAFLET_CONFIG = {
     # conf here
-    'DEFAULT_CENTER': (6.0, 45.0),
+    'DEFAULT_CENTER': (-13, 39.0),
     'DEFAULT_ZOOM': 4,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 26,
-    'DEFAULT_PRECISION': 6,
+    'DEFAULT_PRECISION': 12,
     'SCALE': 'both',
     'FORCE_IMAGE_PATH': True,
+    'MINIMAP': True,
+    # 'SPATIAL_EXTENT': (250, 300,-50, -40),
 }

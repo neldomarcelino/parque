@@ -20,18 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/geography/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/geography/geomap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/parque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parque.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.mapbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.mapbox.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.mapbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.mapbox.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/L.Control.Locate.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/Leaflet.fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/Leaflet.fullscreen.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/fullscreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/fullscreen@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet-search.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet-search.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet-search.mobile.src.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet-search.src.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet-search.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet.browser.print.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet.browser.print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet.fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/geomap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/images/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/images/search-icon-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/leaflet/images/search-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geography/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parque/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/geography/geomap.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/geography/geomap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +63,7 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,22 +92,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.conda/envs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/leaflet/dist" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\images" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\specie" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\registration" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\user" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\species" />
       <recent name="$PROJECT_DIR$/static/admin/js/map" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\specie" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\registration" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home\img" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\home" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\home" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for species.tests.EspecieModelTests">
@@ -190,7 +210,7 @@
       <workItem from="1602842069765" duration="201000" />
       <workItem from="1602842297610" duration="1456000" />
       <workItem from="1602924100261" duration="1405000" />
-      <workItem from="1602925543404" duration="3809000" />
+      <workItem from="1602925543404" duration="21376000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>
