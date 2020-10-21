@@ -12,10 +12,11 @@
 
         <div id="content-main">
 
-            <a href="" class="addlink">
-                Adicionar Especie
-            </a>
-            <br><br>
+<!--            <a href="{% url 'species:addspecie'%}" class="addlink">-->
+<!--                Adicionar Especie-->
+<!--            </a>-->
+<!--            <br>-->
+            <br>
             <div class="module filtered" id="changelist">
 
 
@@ -28,6 +29,7 @@
                             <input type="hidden" name="o" value="">
                         </div>
                     </form>
+
                 </div>
 
 
@@ -36,7 +38,7 @@
 
                     <h3> Por habitat </h3>
                     <ul>
-                        <li class="selected"> <a href="http://127.0.0.1:8000/admin/species/specie/?o=" title="All">Todos</a></li>
+                        <li class="selected"> <a href="?o=" title="All">Todos</a></li>
                         <li> <a href="" title="Esgoto">Terrestre</a></li>
                         <li> <a href="" title="RE">Marinho</a></li>
                     </ul>
@@ -51,6 +53,10 @@
                         <li> <a> Busca Avançada </a> </li>
 
                     </ul>
+                </div>
+
+                <div>
+                    <a> <strong><u>Ver no mapa</u></strong></a>
                 </div>
 
                 <form id="changelist-form" method="post" novalidate="">

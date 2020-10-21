@@ -1,5 +1,7 @@
 import datetime
 import calendar
+
+from django.forms import Form
 from django.utils import timezone
 
 from django.shortcuts import render, get_object_or_404, redirect
@@ -9,6 +11,8 @@ from django.views import generic
 # Create your views here.
 
 from django.views.generic import TemplateView
+
+from .form import SpecieCreateForm
 from .models import Specie
 
 
@@ -62,8 +66,8 @@ class IndexView(TemplateView):
 
         context = {
             '?o=':'Qualquer Período',
-            '?date_created__gte={}&date_created__lt={}'.format(self.get_date(1), self.get_date(0)):'Hoje',
-            '?date_created__gte={}&date_created__lt={}'.format(self.get_date(week_days),self.get_date(0)):'Último 7 dias',
+            '?date_created__gte={}&date_created__lte={}'.format(self.get_date(1), self.get_date(0)):'Hoje',
+            '?date_created__gte={}&date_created__lte={}'.format(self.get_date(week_days),self.get_date(0)):'Último 7 dias',
             '?date_created__gte={}&date_created__lt={}'.format(
                 self.get_date(month_past_days-1),
                 datetime.date(year=this_year.year,month=this_year.month,day=last_day_month)
@@ -95,5 +99,13 @@ class DetailView(generic.DetailView):
     def get_object(self):
         specie = get_object_or_404(Specie, pk=self.kwargs['pk'])
         return specie
+
+
+@method_decorator(login_required(redirect_field_name='next', login_url='/user/login'), name='dispatch')
+class AddView(generic.CreateView):
+    model = Specie
+    context_object_name = 'specie'
+    template_name = 'species/add_specie.html'
+    form_class = SpecieCreateForm
 
 

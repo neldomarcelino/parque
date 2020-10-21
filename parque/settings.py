@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
 
     'leaflet',
-    #'djgeojson',
+    'djgeojson',
     #'rest_framework',
 ]
 
@@ -165,6 +165,6 @@ LEAFLET_CONFIG = {
     'DEFAULT_PRECISION': 12,
     'SCALE': 'both',
     'FORCE_IMAGE_PATH': True,
-    'MINIMAP': True,
+    # 'MINIMAP': True,
     # 'SPATIAL_EXTENT': (250, 300,-50, -40),
 }

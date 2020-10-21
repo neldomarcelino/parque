@@ -9,5 +9,10 @@ $(window).on('map:init', function (e) {
     var searchLayer = L.layerGroup().addTo(map);
     map.addControl( new L.Control.Search({layer: searchLayer}) );
 
+    let specieData = new L.GeoJSON.AJAX("{% url 'speciegeo' %}",{
+
+    });
+    specieData.addTo(map);
+
 });
 

@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('<str:q>', views.IndexView.as_view(), name='search'),
     url(r'^(?P<str>)/$', views.IndexView.as_view(), name='search'),
-    path('detail/<int:pk>', views.DetailView.as_view(), name="detail")
+    path('detail/<int:pk>', views.DetailView.as_view(), name="detail"),
+    path('add_specie/', views.AddView.as_view(), name="addspecie")
 ]

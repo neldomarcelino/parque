@@ -35,5 +35,6 @@ class GeoAdmin(LeafletGeoAdmin):
     list_display = ('specie', 'description', 'longitude', 'latitude')
     search_fields = ['specie']
     formfield_overrides = FORMFIELD_OVERRIDES
+    # map_template = 'geography/geomap.html'
 
 

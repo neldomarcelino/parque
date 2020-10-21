@@ -12,7 +12,7 @@
     <h2 style="color: #3498db;"> Nome Científico: {{specie.specie}} </h2>
     <hr>
     <h5> Nome Comum: {{specie.common_name}} </h5>
-    <h5> Coordenadas: 32-565 </h5>
+    <h5> Localizacao: <a href="{% url 'geography:specie' id=specie.id_specie%}"> <u>Ver no mapa</u></a> </h5>
     <p> Data: {{specie.date_created}} </p>
     <hr>
     <br>
