@@ -57,6 +57,11 @@ INSTALLED_APPS = [
 
     'leaflet',
     'djgeojson',
+
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'channels',
+    'bootstrap4',
+    'dpd_static_support',
     #'rest_framework',
 ]
 
@@ -68,9 +73,15 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+
+
+    'django_plotly_dash.middleware.BaseMiddleware',
+    'django_plotly_dash.middleware.ExternalRedirectionMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+
+
 
 ROOT_URLCONF = 'parque.urls'
 
@@ -89,9 +100,9 @@ TEMPLATES = [
         },
     },
 ]
-
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 WSGI_APPLICATION = 'parque.wsgi.application'
-
+ASGI_APPLICATION = 'parque.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -145,6 +156,23 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+# Plotly dash settings
+
+PLOTLY_DASH = {
+    "ws_route" : "ws/channel",
+
+    "insert_demo_migrations" : True,  # Insert model instances used by the demo
+
+    "http_poke_enabled" : True, # Flag controlling availability of direct-to-messaging http endpoint
+
+    "view_decorator" : None, # Specify a function to be used to wrap each of the dpd view functions
+
+    "cache_arguments" : True, # True for cache, False for session-based argument propagation
+
+    #"serve_locally" : True, # True to serve assets locally, False to use their unadulterated urls (eg a CDN)
+
+    "stateless_loader" : "demo.scaffold.stateless_app_loader",
+    }
 
 
 # Static files (CSS, JavaScript, Images)
@@ -168,3 +196,28 @@ LEAFLET_CONFIG = {
     # 'MINIMAP': True,
     # 'SPATIAL_EXTENT': (250, 300,-50, -40),
 }
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379),],
+        },
+    },
+}
+STATICFILES_FINDERS = [
+
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+    'django_plotly_dash.finders.DashAssetFinder',
+    'django_plotly_dash.finders.DashComponentFinder',
+    'django_plotly_dash.finders.DashAppDirectoryFinder',
+]
+PLOTLY_COMPONENTS = [
+    'dash_core_components',
+    'dash_html_components',
+    'dash_bootstrap_components',
+    'dash_renderer',
+    'dpd_components',
+    'dpd_static_support',
+]

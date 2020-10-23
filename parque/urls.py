@@ -23,6 +23,7 @@ urlpatterns = [
     path('geomap/', include('geography.url')),
     path('user/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
+    path('django_plotly_dash/', include('django_plotly_dash.urls')),
 
 ]
 

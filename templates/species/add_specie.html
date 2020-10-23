@@ -1,132 +1,132 @@
 {% extends "home/base.html" %}
 {% load i18n static %}
 {% block main-content %}
+{% block stylesheet %}
 
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/forms.css' %}">
+{% endblock %}
 <form>
     <div class="content-text content-common">
 
-        <ul class="content-ul">
+    <input type="submit" value="Salvar">
 
-        </ul>
+            <h4>Adicionar Especie</h4>
+            <div class="row">
+                <div class="column row">
+                    <ul class="tabs" data-tabs="lqk6uv-tabs" id="example-tabs">
+                        <li class="tabs-title" role="presentation">
+                            <a href="#panel0" aria-selected="false" role="tab" aria-controls="panel0" id="panel0-label">Especie</a>
+                        </li>
+                        <li class="tabs-title" role="presentation">
+                            <a href="#panel1" role="tab" aria-controls="panel1" aria-selected="false"
+                               id="panel1-label">Habitat</a>
+                        </li>
+                        <li class="tabs-title" role="presentation">
+                            <a href="#panel4" role="tab" aria-controls="panel4" aria-selected="false"
+                               id="panel4-label">Ameacas</a>
+                        </li>
+                        <li class="tabs-title" role="presentation">
+                            <a href="#panel5" role="tab" aria-controls="panel5" aria-selected="false" id="panel5-label">Localização</a>
+                        </li>
+                        <li class="tabs-title is-active" role="presentation">
+                            <a href="#panel6" role="tab" aria-controls="panel6" aria-selected="true" id="panel6-label">
+                                Mais detalhes</a>
+                        </li>
 
-        <table>
-            <tr>
-                <td>
-                    <h2 style="color: #3498db;"> Nome Científico:</h2>
-                </td>
-                <td>
-                    <h2 style="color: #3498db;"> <input id="id_specie" name="specie" type="text"> </h2>
-                </td>
+                    </ul>
 
-            </tr>
-            <hr>
-            <tr>
-                <td>
-                    <h5> Nome Comum: </h5>
-                </td>
-                <td>
-                    <h5>
-                        <input id="id_common_name" name="common_name" type="text">
-                    </h5>
-                </td>
+                    <div class="tabs-content" data-tabs-content="example-tabs">
 
-            </tr>
-            <hr>
-            <tr>
-                <td>
-                    <h5> Coordenadas: </h5>
-                </td>
-                <td>
-                    <h5> 32-565 </h5>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    Data:
-                </td>
-                <td>
-                    <input id="id_date_created" name="date_created" type="date">
-                </td>
-
-            </tr>
-
-        </table>
-
-        <hr>
-        <br>
-
-
-        <div class="row">
-            <div class="column row">
-                <ul class="tabs" data-tabs="lqk6uv-tabs" id="example-tabs">
-                    <li class="tabs-title" role="presentation">
-                        <a href="#panel0" aria-selected="false" role="tab" aria-controls="panel0" id="panel0-label">Descrição</a>
-                    </li>
-                    <li class="tabs-title" role="presentation">
-                        <a href="#panel1" role="tab" aria-controls="panel1" aria-selected="false"
-                           id="panel1-label">Habitat</a>
-                    </li>
-                    <li class="tabs-title" role="presentation">
-                        <a href="#panel4" role="tab" aria-controls="panel4" aria-selected="false"
-                           id="panel4-label">Ameaças</a>
-                    </li>
-                    <li class="tabs-title" role="presentation">
-                        <a href="#panel5" role="tab" aria-controls="panel5" aria-selected="false" id="panel5-label">Conservação</a>
-                    </li>
-                    <li class="tabs-title is-active" role="presentation">
-                        <a href="#panel6" role="tab" aria-controls="panel6" aria-selected="true" id="panel6-label">Saber
-                            mais</a>
-                    </li>
-
-                </ul>
-
-                <div class="tabs-content" data-tabs-content="example-tabs">
-
-                    <div class="tabs-panel habitat" id="panel0" role="tabpanel" aria-hidden="true" aria-labelledby="panel0-label">
-                        <p>
-                            {{specie.detail}}
-                            <br>
-                        </p>
-                    </div>
-
-                    <div class="tabs-panel ameacas" id="panel1" role="tabpanel" aria-hidden="true" aria-labelledby="panel1-label">
-                        <p>
-                            {{specie.habitat}}
-                        </p>
-                    </div>
-
-                    <div class="tabs-panel" id="panel4" role="tabpanel" aria-hidden="true" aria-labelledby="panel4-label">
-                        <p>
-                            Sem ameaças a destacar.
-                        </p>
-                    </div>
-
-                    <div class="tabs-panel" id="panel5" role="tabpanel" aria-hidden="true" aria-labelledby="panel5-label">
-                        <p>
-                            Desconhecido
-                        </p>
-                    </div>
-
-                    <div class="tabs-panel is-active" id="panel6" role="tabpanel" aria-hidden="false"
-                         aria-labelledby="panel6-label">
-                        <p>
-                        </p>
-                        <div class="nome">
-                            <h4>Autores:</h4>
-                            <h5>Encontrado por: 0</h5>
-                            <h5>Identificado por: 0</h5>
-
+                        <div class="tabs-panel habitat" id="panel0" role="tabpanel" aria-hidden="true" aria-labelledby="panel0-label">
+                            <fieldset class="module aligned ">
+                                <div class="form-row field-specie">
+                                    <div>
+                                        <label for="id_specie">Nome cientifico:</label>
+                                        <input type="text" name="specie" class="vTextField" maxlength="45">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="module aligned ">
+                                <div class="form-row field-specie">
+                                    <div>
+                                        <label for="common_name">Nome comum:</label>
+                                        <input type="text" name="common_name" class="vTextField" maxlength="45" id="common_name">
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
-                        <p>
-                        </p>
-                    </div>
-                    <div class="tabs-panel" id="panel8">
-                        <p>
-                        </p>
+
+                        <div class="tabs-panel ameacas" id="panel1" role="tabpanel" aria-hidden="true" aria-labelledby="panel1-label">
+                            <fieldset class="module aligned ">
+                                <div class="form-row field-specie">
+                                    <div>
+                                        <label for="habitat">Habitat:</label>
+                                        <input type="text" name="habitat" class="vTextField" maxlength="45" id="habitat">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="module aligned ">
+                                <div class="form-row field-specie">
+                                    <div>
+                                        <label for="detail">Detalhes:</label>
+                                        <input type="text" name="detail" class="vTextField" maxlength="45" id="detail">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="tabs-panel" id="panel4" role="tabpanel" aria-hidden="true" aria-labelledby="panel4-label">
+                            <p>
+                                  <fieldset class="module aligned ">
+
+
+
+        <div class="form-row field-specie">
+
+
+                <div>
+
+
+                        <label for="id_specie">Specie:</label>
+
+                            <input type="text" name="specie" class="vTextField" maxlength="45" id="id_specie">
+
+
+
+                </div>
+
+        </div>
+
+</fieldset>
+                            </p>
+                        </div>
+
+                        <div class="tabs-panel" id="panel5" role="tabpanel" aria-hidden="true" aria-labelledby="panel5-label">
+                            <p>
+                                Desconhecido
+                            </p>
+                        </div>
+
+                        <div class="tabs-panel is-active" id="panel6" role="tabpanel" aria-hidden="false"
+                             aria-labelledby="panel6-label">
+                            <p>
+                            </p>
+                            <div class="nome">
+                                <h4>Autores:</h4>
+                                <h5>Encontrado por: 0</h5>
+                                <h5>Identificado por: 0</h5>
+
+                            </div>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="tabs-panel" id="panel8">
+                            <p>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+
             <script type="text/javascript">
 
                 $(document).foundation();
@@ -199,10 +199,12 @@
                 <a class="button-cancel-edit" id="edit-cancel" href="#" onclick="hide_especie()"> Cancelar </a>
             </li>
         </ul>
+
     </div>
 
-    <div class="content-img content-common" style="background-color: ccc;">
-        <div style="background-color: ccc;">
+
+    <div class="content-img content-common">
+        <div >
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a id="imagem" class="nav-link active" onclick="div_show('image'); return false;" href="#">Imagens</a>

@@ -20,24 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/species/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet.ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/leaflet/dist/leaflet.ajax.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/species/add_specie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parque/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/species/dashplotly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/specie/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/species/specie_dash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/parque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parque.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geography/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/geography/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parque/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/species/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/species/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/leaflet/geomap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/leaflet/geomap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/change_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/species/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/species/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/add_specie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/add_specie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/species_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +47,17 @@
         <option value="HTML File" />
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -78,22 +85,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/leaflet/dist" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/DjangoPlotLy-master/DjangoPlotLy-master/site1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\images" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\specie" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\registration" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\user" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\species" />
       <recent name="$PROJECT_DIR$/static/admin/js/map" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\specie" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\images" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet" />
+      <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\registration" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for species.tests.EspecieModelTests">
@@ -197,6 +204,7 @@
       <workItem from="1602842297610" duration="1456000" />
       <workItem from="1602924100261" duration="1405000" />
       <workItem from="1602925543404" duration="49696000" />
+      <workItem from="1603263797538" duration="36261000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>
@@ -244,19 +252,19 @@
       <screen x="1366" y="0" width="1600" height="900" />
     </state>
     <state x="1822" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741/1366.0.1600.900@1366.0.1600.900" timestamp="1595775697665" />
-    <state x="518" y="148" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603203184395">
+    <state x="518" y="148" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603284985572">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="518" y="141" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598177739587" />
-    <state x="518" y="148" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603203184395" />
+    <state x="518" y="148" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603284985572" />
     <state x="461" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1596571280381" />
-    <state x="377" y="82" key="SettingsEditor" timestamp="1603200984220">
+    <state x="377" y="82" key="SettingsEditor" timestamp="1603343513361">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="193" y="4" key="SettingsEditor/0.0.1536.824/-1600.0.1600.860@0.0.1536.824" timestamp="1598193467376" />
     <state x="193" y="4" key="SettingsEditor/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1597471600946" />
     <state x="193" y="4" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598646961239" />
-    <state x="377" y="82" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603200984220" />
+    <state x="377" y="82" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603343513361" />
     <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1596573048527" />
     <state x="1772" y="27" key="SettingsEditor/1600.0.1366.768/0.27.1600.873@1600.0.1366.768" timestamp="1596304652579" />
     <state x="408" y="299" width="540" height="194" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596571113593">

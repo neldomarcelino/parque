@@ -12,6 +12,7 @@ from django.views import generic
 
 from django.views.generic import TemplateView
 
+from . import dashplotly
 from .form import SpecieCreateForm
 from .models import Specie
 
@@ -19,7 +20,7 @@ from .models import Specie
 @method_decorator(login_required(redirect_field_name='next', login_url='/user/login'), name='dispatch')
 class IndexView(TemplateView):
     model = Specie
-    template_name = 'species/index.html'
+    template_name = 'species/species_list.html'
     context_object_name = 'results_list'
 
     def get_context_data(self, **kwargs):
@@ -107,5 +108,19 @@ class AddView(generic.CreateView):
     context_object_name = 'specie'
     template_name = 'species/add_specie.html'
     form_class = SpecieCreateForm
+
+
+@method_decorator(login_required(redirect_field_name='next', login_url='/user/login'), name='dispatch')
+class SpecieDashView(TemplateView):
+    template_name = "species/specie_dash.html"
+
+
+class DashSpeciesQuery():
+
+    def dash_species_per_year(self):
+        species = Specie.objects.all()
+        return species
+
+
 
 

@@ -9,5 +9,6 @@ urlpatterns = [
     path('<str:q>', views.IndexView.as_view(), name='search'),
     url(r'^(?P<str>)/$', views.IndexView.as_view(), name='search'),
     path('detail/<int:pk>', views.DetailView.as_view(), name="detail"),
-    path('add_specie/', views.AddView.as_view(), name="addspecie")
+    path('add_specie/', views.AddView.as_view(), name="addspecie"),
+    path('dash_specie/', views.SpecieDashView.as_view(), name="dashspecie")
 ]

@@ -1,4 +1,5 @@
 
+{%load plotly_dash%}
 {% load leaflet_tags %}
 {% load i18n static %}
 {% load i18n admin_urls static admin_list %}
@@ -79,8 +80,20 @@
     <script src='{% static "leaflet/dist/leaflet-search.src.js" %}'></script>
     <script src='{% static "leaflet/dist/L.Control.Locate.min.js" %}'></script>
     <script src='{% static "leaflet/dist/leaflet.ajax.js" %}'></script>
+    {% block stylesheet %}
+
+    {% endblock %}
 
     <!-- EndGeoMap -->
+
+    <!-- DjangoDash-->
+    {% load bootstrap4%}
+    {% bootstrap_css%}
+    {% bootstrap_javascript jquery="full"%}
+    {% block extra_header%}{% endblock%}
+    {% plotly_header%}
+
+    <!--EndDjangoDash-->
   </head>
 
   <body class="size-1140 change-list">
@@ -359,5 +372,15 @@ $(window).on('map:init', function (e) {
 
 });
     </script>
+    {% block tail %}
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  {% endblock %}
+
    </body>
+
+  {% block post_body%} {% endblock%}
+  {% plotly_footer %}
 </html>
