@@ -16,7 +16,7 @@ class Specie(models.Model):
     detail = models.CharField(db_column='detalhes', max_length=1000, blank=True, null=True)
     common_name = models.CharField(db_column='NomeComum', max_length=45, blank=True, null=True)  # Field name made lowercase.
     date_created = models.DateTimeField(db_column='DataCriacao')  # Field name made lowercase.
-
+    year = models.IntegerField(db_column='ano', blank=False, null=True)
 
     class Meta:
         managed = True

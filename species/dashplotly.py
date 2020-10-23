@@ -1,6 +1,6 @@
+import datetime
+
 from django.db.models import Count
-from django.db.models.functions import TruncYear
-import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
@@ -17,28 +17,23 @@ app = DjangoDash('SpecieDash', external_stylesheets=external_stylesheets)
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
-data_specie_1 = Specie.objects.values(year='date_created').annotate(total=Count('date_created__year'))
-print(data_specie_1)
-for s in data_specie_1:
-    print(s)
+data_specie = Specie.objects.values('year').annotate(total=Count('year')).order_by('year')
 
-data_specie = Specie.objects.all()
-species = []
-habitat = []
+total = []
 year = []
+
 for specie in data_specie:
-    species.append(specie.specie)
-    habitat.append(specie.habitat)
-    year.append(specie.date_created.year)
+    total.append(specie.get('total'))
+    year.append(specie.get('year'))
+
 dict_specie_data = {
-        "species": species,
-        "habitat": habitat,
         "year": year,
+        "total": total,
     }
 df = pd.DataFrame(dict_specie_data)
 
-fig = px.line(df, x="year", y="habitat", color="species")
-
+specie_line_graph = px.line(df, x="year", y="total", title='Linha de registo de especies')
+specie_pie_graph = px.pie(df, values='total', names='year')
 
 app.layout = html.Div(children=[
     html.H3(children='Analise Especies'),
@@ -48,8 +43,12 @@ app.layout = html.Div(children=[
     '''),
 
     dcc.Graph(
-        id='example-graph',
-        figure=fig
+        id='specie-graph',
+        figure=specie_line_graph
+    ),
+    dcc.Graph(
+        id='specie-pie',
+        figure=specie_pie_graph
     )
 ])
 

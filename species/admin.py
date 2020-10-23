@@ -28,7 +28,7 @@ class LocationInline(admin.TabularInline):
 
 
 class SpecieAdmin(admin.ModelAdmin):
-    list_display = ('specie', 'habitat', 'detail', 'common_name', 'gender', 'date_created')
+    list_display = ('specie', 'habitat', 'detail', 'common_name', 'gender', 'date_created', 'year')
     list_filter = ['habitat', 'date_created', 'gender']
     search_fields = ['specie', 'common_name']
     list_per_page = 10
