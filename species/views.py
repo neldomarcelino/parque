@@ -16,6 +16,13 @@ from . import dashplotly
 from .form import SpecieCreateForm
 from .models import Specie
 
+# Rest full API
+
+from rest_framework import viewsets
+from rest_framework import permissions
+
+from .serializers import SpecieSerializer
+
 
 @method_decorator(login_required(redirect_field_name='next', login_url='/user/login'), name='dispatch')
 class IndexView(TemplateView):
@@ -115,11 +122,21 @@ class SpecieDashView(TemplateView):
     template_name = "species/specie_dash.html"
 
 
-class DashSpeciesQuery():
+class DashSpeciesQuery:
 
     def dash_species_per_year(self):
         species = Specie.objects.all()
         return species
+
+
+class SpecieViewSetAPI(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Specie.objects.all().order_by('-date_created')
+    serializer_class = SpecieSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
 
 
 

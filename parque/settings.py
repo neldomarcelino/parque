@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'channels',
     'bootstrap4',
     'dpd_static_support',
-    #'rest_framework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -221,3 +221,12 @@ PLOTLY_COMPONENTS = [
     'dpd_components',
     'dpd_static_support',
 ]
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}

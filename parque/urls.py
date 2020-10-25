@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
 
+from species import views
+
+router = routers.DefaultRouter()
+router.register(r'specie', views.SpecieViewSetAPI)
 
 urlpatterns = [
     path('', include('home.url')),
@@ -24,6 +29,8 @@ urlpatterns = [
     path('user/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('django_plotly_dash/', include('django_plotly_dash.urls')),
+    path('pnq-api/', include(router.urls)),
+    path('pnq-auth-api/', include('rest_framework.urls')),
 
 ]
 
