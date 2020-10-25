@@ -7,26 +7,6 @@
 <html lang="en-US">
   <head>
 
-
-    <style>
-
-      .leaflet-container {  /* all maps */
-          width:  100%;
-          height: 600px;
-      }
-
-      #specialbigmap {
-          height: 800px;
-      }
-
-      /* Resize the "display_raw" textbox */
-      .django-leaflet-raw-textarea {
-          width: 100%;
-      }
-
-    </style>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PN-Quirimbas</title>
@@ -46,54 +26,24 @@
 
 
     <!-- Especies Page Style-->
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/changelists.css' %}">
-    <script type="text/javascript" src="{% static 'specie/a' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/jquery_002.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/core.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/RelatedObjectLookups.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/actions.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/urlify.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/prepopulate.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/xregexp.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/meu_script.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/modernizr.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/responsive.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/especie.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/normalize.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/foundation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/bootstrap.css' %}">
-    <script type="text/javascript" src="{% static 'specie/actions.js' %}"></script>
-    <script type="text/javascript" src="{% static 'specie/foundation.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'specie/base.css' %}">
+    {% block specie_style %}
+    
+    {% endblock %}
     <!--End Especies Page Style-->
 
     <!-- GeoMap-->
-    {% leaflet_css %}
-    {% leaflet_js %}
-    <link href='{% static "leaflet/dist/leaflet.fullscreen.css" %}' rel='stylesheet' />
-    <link href='{% static "leaflet/dist/leaflet-search.src.css" %}' rel='stylesheet' />
-    <link href='{% static "leaflet/dist/L.Control.Locate.min.css" %}' rel='stylesheet' />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src='{% static "leaflet/dist/Leaflet.fullscreen.min.js" %}'></script>
-    <script src='{% static "leaflet/dist/leaflet.browser.print.min.js" %}'></script>
-    <script src='{% static "leaflet/dist/leaflet-search.src.js" %}'></script>
-    <script src='{% static "leaflet/dist/L.Control.Locate.min.js" %}'></script>
-    <script src='{% static "leaflet/dist/leaflet.ajax.js" %}'></script>
-    {% block stylesheet %}
-
+    {% block style_map %}
     {% endblock %}
 
     <!-- EndGeoMap -->
 
+
     <!-- DjangoDash-->
-    {% load bootstrap4%}
-    {% bootstrap_css%}
-    {% bootstrap_javascript jquery="full"%}
-    {% block extra_header%}{% endblock%}
-    {% plotly_header%}
+    {% block extra_header_dash%}
+    {% endblock%}
 
     <!--EndDjangoDash-->
+
   </head>
 
   <body class="size-1140 change-list">
@@ -131,7 +81,7 @@
         {% block usertools %}
         {% if user.is_authenticated %}
             <ul class="right chevron">
-              <li><a href="{% url 'home:index'%}">Pagina Inicial</a></li>
+              <li><a href="{% url 'home:dashspecie'%}">Pagina Inicial</a></li>
               <li><a href="{% url 'species:index'%}">Especies</a></li>
               <li><a href="{% url 'geography:index'%}">Mapeamento</a></li>
               <li><a>{{ user.username }}</a>
@@ -152,197 +102,6 @@
 
     <!-- MAIN -->
     {% block main-content %}
-         <main role="main">
-      <!-- Main Carousel -->
-      <section class="section background-dark">
-        <div class="line">
-          <div class="carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-wide-arrows">
-            <div class="item">
-              <div class="s-12 center">
-                <img src="{% static 'home/img/01-boxed.jpg' %}" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">Prospera is the New Amazing HTML5 Template</p>
-                      <p class="text-white text-size-16 margin-bottom-40">Duis autem vel eum iriure dolor in hendrerit in vulputate velit<br> esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="s-12 center">
-                <img src="{% static 'home/img/02-boxed.jpg' %}" alt="">
-                <div class="carousel-content">
-                  <div class="padding-2x">
-                    <div class="s-12 m-12 l-8">
-                      <p class="text-white text-s-size-20 text-m-size-40 text-l-size-60 margin-bottom-40 text-thin text-line-height-1">With Fully Responsive Components</p>
-                      <p class="text-white text-size-16 margin-bottom-30">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 1 -->
-      <section class="section background-white">
-        <div class="line">
-          <div class="margin">
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'home/img/img-01.jpg' %}" alt="">
-              <h2 class="text-thin">Clean Design</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>
-            </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'home/img/img-02.jpg' %}" alt="">
-              <h2 class="text-thin">Valid code</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>
-            </div>
-            <div class="s-12 m-12 l-4 margin-m-bottom">
-              <img class="margin-bottom" src="{% static 'home/img/img-03.jpg' %}" alt="">
-              <h2 class="text-thin">Totally free</h2>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-              <a class="text-more-info text-primary-hover" href="/">Read more</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2 -->
-      <section class="section background-primary text-center">
-        <div class="line">
-          <div class="s-12 m-10 l-8 center">
-            <h2 class="headline text-thin text-s-size-30">We are Web Design Heroes</h2>
-            <p class="text-size-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3 -->
-      <section class="section background-white">
-        <div class="full-width text-center">
-          <img class="center margin-bottom-30" style="margin-top: -210px;" src="{% static 'home/img/bio.png' %}" alt="">
-          <div class="line">
-            <h2 class="headline text-thin text-s-size-30">Fully <span class="text-primary">Responsive</span> HTML5 Template</h2>
-            <p class="text-size-20 text-s-size-16 text-thin">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
-            <i class="icon-more_node_links icon2x text-primary margin-top-bottom-10"></i>
-            <p class="text-size-20 text-s-size-16 text-thin text-primary">Try resize your browser window</p>
-          </div>
-        </div>
-      </section>
-      <hr class="break margin-top-bottom-0">
-
-      <!-- Section 4 -->
-      <section class="section background-white">
-        <div class="line">
-          <h2 class="text-thin headline text-center text-s-size-30 margin-bottom-50">From Our <span class="text-primary">Blog</span></h2>
-          <div class="carousel-default owl-carousel carousel-wide-arrows">
-            <div class="item">
-              <div class="margin">
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-05.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-03.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="margin">
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-04.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-02.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="margin">
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-01.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="{% static 'home/img/blog-06.jpg' %}" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
     {% endblock %}
 
 

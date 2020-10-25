@@ -3,9 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 
 
-from . import views
+from species.views import SpecieDashView
+from home.views import Home
 
 app_name = 'home'
 urlpatterns = [
-    path('', views.Home.as_view(), name='index'),
+    path('home/', Home.as_view(), name='index'),
+    path('', SpecieDashView.as_view(), name="dashspecie")
 ]

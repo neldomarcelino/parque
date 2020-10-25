@@ -1,10 +1,33 @@
 {% extends "home/base.html" %}
 {% load i18n static %}
-{% block main-content %}
-{% block stylesheet %}
 
+{% block specie_style %}
+    {{block.super}}
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/changelists.css' %}">
+    <script type="text/javascript" src="{% static 'specie/a' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/jquery_002.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/RelatedObjectLookups.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/actions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/urlify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/prepopulate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/xregexp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/meu_script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/modernizr.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/responsive.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/especie.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/foundation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/bootstrap.css' %}">
+    <script type="text/javascript" src="{% static 'specie/actions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'specie/foundation.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'specie/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'specie/forms.css' %}">
 {% endblock %}
+
+{% block main-content %}
+
 <form>
     <div class="content-text content-common">
 

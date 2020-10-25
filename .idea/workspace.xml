@@ -21,9 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/species/dashplotly.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/dashplotly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/species/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/geography/geomap.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/geography/geomap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/add_specie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/add_specie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/specie_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/specie_dash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/species/species_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/species/species_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +200,9 @@
       <workItem from="1602924100261" duration="1405000" />
       <workItem from="1602925543404" duration="49696000" />
       <workItem from="1603263797538" duration="45031000" />
-      <workItem from="1603449715991" duration="2775000" />
+      <workItem from="1603449715991" duration="3232000" />
+      <workItem from="1603512496328" duration="101000" />
+      <workItem from="1603597736369" duration="3746000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>
