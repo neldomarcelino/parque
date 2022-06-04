@@ -1,0 +1,76 @@
+{% extends "home/base.html" %}
+
+{% block main-content%}
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <article>
+        <div class="section background-white">
+          <div class="line">
+            <div class="margin">
+              
+              <!-- Company Information -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-30">Informções do Parque</h2>
+                <div class="float-left">
+                  <i class="icon-placepin background-primary icon-circle-small text-size-20"></i>
+                </div>
+                <div class="margin-left-80 margin-bottom">
+                  <h4 class="text-strong margin-bottom-0">Endereço</h4>
+                  <p>Cabo Delgado<br>
+                     Quirimbas<br>
+                  </p>               
+                </div>
+                <div class="float-left">
+                  <i class="icon-paperplane_ico background-primary icon-circle-small text-size-20"></i>
+                </div>
+                <div class="margin-left-80 margin-bottom">
+                  <h4 class="text-strong margin-bottom-0">E-mail</h4>
+                  <p>guerzeneldo@gmail.com
+                  </p>              
+                </div>
+
+              </div>
+              
+              <!-- Contact Form -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-30">Login</h2>
+                <small>
+                        {% if form.errors %}
+                          <p>Your username and password didn't match. Please try again.</p>
+                        {% endif %}
+                </small>
+                <small>
+                  {% if next %}
+                    {% if user.is_authenticated %}
+                      <p>Your account doesn't have access to this page. To proceed,
+                      please login with an account that has access.</p>
+                    {% else %}
+                      <p>Please login to see this page.</p>
+                    {% endif %}
+                  {% endif %}
+                </small>
+                <form class="customform" action="{% url 'login' %}" method="post">
+                  {% csrf_token %}
+                  <div class="line">
+                  </div>
+                  <div class="s-12">
+                        <input name="username" class="required email border-radius" placeholder="Username" title="Username" type=text />
+                  </div>
+                  <div class="s-12"> 
+                    <input name="password" class="required border-radius" placeholder="Palavra passe" title="Palavra passe" type="password" />
+                  </div>
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" name="next" value="{{ next }}" type="submit">Sign In</button></div>
+                </form>
+
+              </div>
+
+
+            </div>  
+          </div> 
+        </div> 
+      </article>
+
+    </main>
+
+{% endblock %}

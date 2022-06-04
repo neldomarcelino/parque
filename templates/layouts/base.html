@@ -1,0 +1,195 @@
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+{%load plotly_dash%}
+{% load leaflet_tags %}
+{% load i18n static %}
+{% load i18n admin_urls static admin_list %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Static assets - Used to load the Favicon -->
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>
+    Parque Nacional das Quirimbas{% block title %} {% endblock %}
+  </title>
+
+  <!-- Favicon - loaded as static -->
+  <link href="{% static 'assets/img/brand/favicon.png' %}" rel="icon" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="/static/assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="/static/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="/static/assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+
+  <!-- Specific CSS goes HERE -->
+  {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body class="">
+
+  {% include "includes/sidenav.html" %}
+
+  <div class="main-content">
+
+    {% include "includes/navigation.html" %}
+
+    {% block content %}{% endblock content %}
+
+  </div>
+
+  {% include "includes/scripts.html" %}
+
+  <!-- Specific JS goes HERE --> 
+  {% block javascripts %}{% endblock javascripts %}
+<script type="text/javascript" >
+      var map
+      $(window).on('map:init', function (e) {
+          var detail = e.originalEvent ? e.originalEvent.detail : e.detail;
+          map = detail.map;
+
+          // map.scrollWheelZoom = (window.self === window.top) ? true : false;
+          // map.dragging = (window.self !== window.top && L.Browser.touch) ? false : true;
+          // map.tap = (window.self !== window.top && L.Browser.touch) ? false : true;
+          // Begin Locator, print map and fullscreen
+
+          L.marker([50.5, 30.5]).addTo(map);
+          map.addControl(new L.Control.Fullscreen());
+          L.control.locate().addTo(map);
+          L.control.browserPrint().addTo(map);
+
+          //End Locatop, print map and fullscreen
+
+
+          // var searchLayer = L.layerGroup().addTo(map)
+          // map.addControl( new L.Control.Search({layer: searchLayer}) );
+
+
+          // Begin Geo Location by name.
+
+          var options = {
+            key: '44cffcbf36d543ac891024cd57e7317d', // REPLACE WITH YOUR API-KEY. This key might go away any time!
+            limit: 10
+          };
+
+          var geocoder = L.Control.OpenCageSearch.geocoder(options);
+          var control = L.Control.openCageSearch(options).addTo(map);
+          var marker;
+
+          map.on('dblclick', function(e) {
+            var query = e.latlng.lat.toString() + ',' + e.latlng.lng.toString();
+            geocoder.geocode(query, function(results) {
+              var r = results[0];
+              if (r) {
+                if (marker) {
+                  marker.setLatLng(r.center).setPopupContent(r.name).openPopup();
+                } else {
+                  marker = L.marker(r.center).bindPopup(r.name).addTo(map).openPopup();
+                }
+              }
+            })
+          });
+
+          // End Geo Location by name
+
+
+          // Begin Layers
+
+            var keyLayer = 'pk.87f2d9fcb4fdd8da1d647b46a997c727';
+            var streets = L.tileLayer.Unwired({key: keyLayer, scheme: "streets"});
+            var earth = L.tileLayer.Unwired({key: keyLayer, scheme: "earth"});
+            var hybrid = L.tileLayer.Unwired({key: keyLayer, scheme: "hybrid"});
+
+                // Add the 'layers' control
+            L.control.layers({
+                "Streets": streets,
+                "Earth": earth,
+                "Hybrid": hybrid,
+            }, null, {
+                position: "topright"
+            }).addTo(map);
+
+          //End Layers
+
+          // Begin Map Scale
+
+            L.control.scale ({maxWidth:240, metric:true, imperial:false, position: 'bottomleft'}).addTo (map);
+            let polylineMeasure = L.control.polylineMeasure (
+                    {
+                      position:'topleft',
+                      unit:'metres',
+                      showBearings:true,
+                      clearMeasurementsOnStop: false,
+                      showClearControl: true,
+                      showUnitControl: true
+                    }
+            );
+            polylineMeasure.addTo(map);
+            function debugevent(e) { console.debug(e.type, e, polylineMeasure._currentLine) }
+
+            map.on('polylinemeasure:toggle', debugevent);
+            map.on('polylinemeasure:start', debugevent);
+            map.on('polylinemeasure:resume', debugevent);
+            map.on('polylinemeasure:finish', debugevent);
+            map.on('polylinemeasure:change', debugevent);
+            map.on('polylinemeasure:clear', debugevent);
+            map.on('polylinemeasure:add', debugevent);
+            map.on('polylinemeasure:insert', debugevent);
+            map.on('polylinemeasure:move', debugevent);
+            map.on('polylinemeasure:remove', debugevent);
+
+
+          // End Map Scale
+
+          // Begin Measure Master
+
+          // End Measure Master
+
+          L.control.measure({
+            position: 'bottomright',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'hectares',
+            secondaryAreaUnit: 'sqmeters',
+            activeColor: '#ABE67E',
+            completedColor: '#C8F2BE',
+          }).addTo(map);
+
+          var specieData = new L.GeoJSON.AJAX("{% url 'geography:speciegeo' %}",{
+
+          });
+          specieData.addTo(map);
+
+      });
+    </script>
+    {% block tail %}
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  {% endblock %}
+</body>
+{% block post_body%} {% endblock%}
+  {% plotly_footer %}
+</html>

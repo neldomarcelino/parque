@@ -1,0 +1,28 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static leaflet_tags %}
+
+{% block stylesheets %}
+{{ block.super }}
+{% leaflet_css plugins="ALL" %}
+<style>
+/* Force leaflet controls underneath header (z-index 1000) and
+   above leaflet tiles (z-index 400)*/
+.leaflet-top{z-index:999;}
+</style>
+{% endblock %}
+
+{% block javascripts %}
+{{ block.super }}
+{% leaflet_js plugins="ALL" %}
+<script>
+  window.addEventListener("map:init", function (event) {
+    var map = event.detail.map; // Get reference to map
+
+    // Other modifications, e.g. fullscreen control:
+    map.addControl(new L.Control.Fullscreen());
+    // Note, this requires the Leaflet fullscreen CSS, JS,
+    // and image assets to be present as static files,
+    // and configured in LEAFLET_SETTINGS
+});
+</script>
+{% endblock %}

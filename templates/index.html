@@ -1,0 +1,130 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+{%load plotly_dash%}
+
+{% block extra_header_dash %}
+{{block.super}}
+    {% plotly_header%}
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-md-8" style="background-color: #1f7301; !important;">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Especies</h5>
+                      <span class="h2 font-weight-bold mb-0">{{specie.all_specie.count}}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Especies Registadas</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Ultimo 7 dias</h5>
+                      <span class="h2 font-weight-bold mb-0">{{specie.last_7_days.count}}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-chart-pie"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                    <span class="text-nowrap">Especies Registdas</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Ultimo Mes</h5>
+                      <span class="h2 font-weight-bold mb-0">{{specie.last_month.count}}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                    <span class="text-nowrap">Especies Registdas</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Correne Ano</h5>
+                      <span class="h2 font-weight-bold mb-0">{{specie.this_year.count}}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-percent"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                    <span class="text-nowrap">Especies Registdas</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid mt--7">
+
+      <!--Dashboard-->
+    <div class='{% plotly_class name="SpecieDash" %} card' style="height: 100%;width: 100%;">
+      {%plotly_direct name="SpecieDash" %}
+    </div>
+    <!--Dashboard END-->
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

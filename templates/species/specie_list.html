@@ -1,0 +1,146 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-6 col-lg-8">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+
+                      <h5 class="card-title text-uppercase text-muted mb-0">Filtro por data de registo</h5>
+                          {% for key, value in filter.items %}
+                              <span class="h5 font-weight-bold mb-0"> <a href="{{key}}" title="Any date">{{value}}</a></span>|
+                          {% endfor %}
+                    </div>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-8">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Pesquisa</h5>
+
+                      <form id="changelist-search" method="get">
+                            <input class="form-control" type="text" size="35" name="q" id="searchbar" placeholder="Procurar" autofocus="" style="height: 28px;">
+                            <input type="hidden" name="o" value="">
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt--7">
+
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <h3 class="mb-0">Especies</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Nome cientifico</th>
+                    <th scope="col">Nome comum</th>
+                    <th scope="col">Habitat</th>
+                    <th scope="col"> Localizacao </th>
+                    <th scope="col">Data de registo</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for data in results_list%}
+                    <tr>
+                        <td>
+                            <a href="{% url 'species:detail' pk=data.id_specie %}">
+                                {{data.specie}}
+                            </a>
+                        </td>
+                        <td>
+                          {{data.common_name}}
+                        </td>
+                        <td>
+                          {{data.habitat}}
+                        </td>
+                        <td>
+                          <a>Ver no mapa</a>
+                        </td>
+                        <td>
+                            {{data.date_created}}
+                        </td>
+                        <td class="text-right">
+                          <div class="dropdown">
+                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                <a class="dropdown-item" href="{% url 'species:edit' pk=data.id_specie %}">Editar</a>
+                                <a class="dropdown-item" href="{% url 'species:delete' pk=data.id_specie %}">Apagar</a>
+                              <a class="dropdown-item" href="#">iCompartilhar</a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer py-4">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-end mb-0">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">
+                      <i class="fas fa-angle-left"></i>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

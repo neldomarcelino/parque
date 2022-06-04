@@ -1,0 +1,145 @@
+
+{%load plotly_dash%}
+{% load leaflet_tags %}
+{% load i18n static %}
+{% load i18n admin_urls static admin_list %}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PN-Quirimbas</title>
+    <link rel="stylesheet" href="{% static 'home/css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'home/owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'home/owl-carousel/owl.theme.css' %}">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="{% static 'home/css/template-style.css' %}">
+    <script type="text/javascript" src="{% static 'home/js/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/js/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/js/validation.js' %}"></script>
+
+
+
+
+
+    <!-- Especies Page Style-->
+    {% block specie_style %}
+    
+    {% endblock %}
+    <!--End Especies Page Style-->
+
+    <!-- GeoMap-->
+    {% block style_map %}
+    {% endblock %}
+
+    <!-- EndGeoMap -->
+
+
+    <!-- DjangoDash-->
+    {% block extra_header_dash%}
+    {% endblock%}
+
+    <!--EndDjangoDash-->
+
+  </head>
+
+  <body class="size-1140 change-list">
+  	<!-- HEADER -->
+    <header role="banner">
+      <!-- Top Bar -->
+      <div class="top-bar background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12">Contact Us: +258 845 4406 28 | <a class="text-orange-hover" href="mailto:guerzeneldo@gmail.com">guerzeneldo@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="/"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+        <div class="line">
+          <div class="s-12 l-2">
+            <a href="{% url 'home:index'%}" class="logo"><img src="{% static 'home/img/logo-free.png' %}" alt=""></a>
+          </div>
+          <div class="top-nav s-12 l-10">
+            <p class="nav-text"></p>
+        {% block usertools %}
+        {% if user.is_authenticated %}
+            <ul class="right chevron">
+              <li><a href="{% url 'home:dashspecie'%}">Pagina Inicial</a></li>
+              <li><a href="{% url 'species:index'%}">Especies</a></li>
+              <li><a href="{% url 'geography:index'%}">Mapeamento</a></li>
+              <li><a>{{ user.username }}</a>
+                <ul>
+                  <li><a href="{% url 'logout'%}">Logout</a></li>
+                </li>
+                  <li><a>Editar</a></li>
+                </ul>
+              </li>
+
+            </ul>
+        {% endif %}
+            {% endblock %}
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    {% block main-content %}
+    {% endblock %}
+
+
+    <!-- FOOTER -->
+    {% include 'home/footer.html' %}
+
+    <script type="text/javascript" src="{% static 'home/js/responsee.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/js/template-scripts.js' %}"></script>
+
+    <script type="text/javascript" >
+      var map
+$(window).on('map:init', function (e) {
+    var detail = e.originalEvent ? e.originalEvent.detail : e.detail;
+    map = detail.map;
+    L.marker([50.5, 30.5]).addTo(map);
+    map.addControl(new L.Control.Fullscreen());
+    L.control.locate().addTo(map);
+    L.control.browserPrint().addTo(map);
+    var searchLayer = L.layerGroup().addTo(map);
+    map.addControl( new L.Control.Search({layer: searchLayer}) );
+
+    var specieData = new L.GeoJSON.AJAX("{% url 'geography:speciegeo' %}",{
+
+    });
+    specieData.addTo(map);
+
+});
+    </script>
+    {% block tail %}
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  {% endblock %}
+
+   </body>
+
+  {% block post_body%} {% endblock%}
+  {% plotly_footer %}
+</html>

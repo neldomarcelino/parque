@@ -1,0 +1,21 @@
+{% extends "home/base.html" %}
+{% load i18n static %}
+{%load plotly_dash%}
+
+{% block extra_header_dash %}
+{{block.super}}
+    {% load bootstrap4%}
+    {% bootstrap_css%}
+    {% bootstrap_javascript jquery="full"%}
+    {% plotly_header%}
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+{% block main-content %}
+
+<div class='{% plotly_class name="SpecieDash" %} card' style="height: 100%;width: 100%;">
+    {%plotly_direct name="SpecieDash" %}
+</div>
+
+
+{% endblock %}
