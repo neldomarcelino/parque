@@ -20,4 +20,5 @@ sqlparse~=0.4.2
 whitenoise~=6.1.0
 django-colorfield~=0.7.0
 gunicorn~=20.1.0
-gdal==2.3.0
+pyinaturalist~=0.17.1
+setuptools==58.0.0

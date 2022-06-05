@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'inaturalist.apps.InaturalistConfig',
     'speciesImage.apps.SpeciesimageConfig',
     'location.apps.LocationConfig',
     'district.apps.DistrictConfig',

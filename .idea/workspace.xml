@@ -20,9 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5af298f1-6825-451a-9a7e-d74340ceb0d9" name="Default Changelist" comment="Procfile">
+      <change afterPath="$PROJECT_DIR$/inaturalist/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inaturalist/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inaturalist/inaturalist_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inaturalist/inaturalist_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parque/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parque/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/parque/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/species/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/species/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/sidenav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +47,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -73,20 +88,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/digio/Downloads/parque&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/digio/Downloads/parque/templates/iNaturalist",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/iNaturalist" />
+      <recent name="$PROJECT_DIR$/parque/production" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque\templates\admin" />
       <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist\measure" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist" />
-      <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gfernando\PycharmProjects\parque\static\leaflet\dist\measure" />
@@ -258,7 +273,7 @@
       <workItem from="1648305093882" duration="770000" />
       <workItem from="1654228096686" duration="825000" />
       <workItem from="1654279633447" duration="7593000" />
-      <workItem from="1654339549201" duration="8281000" />
+      <workItem from="1654339549201" duration="23396000" />
     </task>
     <task id="LOCAL-00001" summary="New Design.">
       <created>1595775697967</created>

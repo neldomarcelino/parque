@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block content %}
+
+
+
+                {% for data in results_list%}
+                    <h3>
+                        {{data}}
+                    </h3>
+                {% endfor %}
+
+
+
+      {% include "includes/footer.html" %}
+
+
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
