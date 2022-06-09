@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 from django.views.generic import TemplateView
-from pyinaturalist import *
+from pyinaturalist import get_observations
 
 from inaturalist.models import iNaturalist
 
@@ -17,7 +17,8 @@ class iNaturalistView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['results_list'] = self.i_observations_by_user()
-        print("TESTE:{}".format(self.i_observations_by_user()))
+        for inaturalist in self.i_observations_by_user()['results']:
+            print("TESTE:{}".format(inaturalist))
 
         return context
 
@@ -26,3 +27,10 @@ class iNaturalistView(TemplateView):
         observations = get_observations(user_id='guerzeneldo')
         return observations
 
+    def i_authenticate(self):
+        token = {
+            'username': '',
+            'password': '',
+            'app_id': 'my_app_id',
+            'app_secret': '',
+        }
