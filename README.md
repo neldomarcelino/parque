@@ -34,4 +34,3 @@ If you are using conda or install the gdal and all dependeces
     - https://django-leaflet.readthedocs.io/en/latest/installation.html 
 
 ## Git Push:
-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

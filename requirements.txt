@@ -1,4 +1,4 @@
-setuptools=60.0.5
+setuptools~=60.0.5
 Django==2.2.7
 django-leaflet~=0.27.1
 pandas~=1.1.3
